@@ -35,6 +35,14 @@ mp.xlabel("Pclass")
 mp.ylabel("Servived")
 mp.show()
 
+#Histogram for Age distribution
+se.histplot(df["Age"], kde=True,bins=30,color="purple",edgecolor="black")
+mp.title="Age_Distribution"
+mp.xlabel("Age")
+mp.ylabel("Rate")
+mp.legend("Age")
+mp.show()
+
 
 
 
