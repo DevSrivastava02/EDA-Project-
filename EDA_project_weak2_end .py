@@ -29,20 +29,30 @@ print(First_class.tail())
 #Visulization of servival rate according to the Pclass
 Servival_by_class=df.groupby("Pclass")["Survived"].mean()
 mp.bar(Servival_by_class.index,Servival_by_class.values, color="Skyblue" )
-mp.title="Servival_rate"
-mp.legend()
+mp.title("Servival_rate")
+
 mp.xlabel("Pclass")
 mp.ylabel("Servived")
 mp.show()
 
 #Histogram for Age distribution
-se.histplot(df["Age"], kde=True,bins=30,color="purple",edgecolor="black")
-mp.title="Age_Distribution"
+se.histplot(df["Age"],kde="True",bins=30,color="purple",edgecolor="black")
+mp.title("Age_Distribution")
 mp.xlabel("Age")
-mp.ylabel("Rate")
-mp.legend("Age")
+mp.ylabel("Frequnecy")
+
+
 mp.show()
 
+# Scatter plot in Age vs Fare
+mp.scatter(df["Age"],df["Fare"], alpha=0.5,color="red",)
+
+mp.title("Age_vs_fear")
+mp.xlabel("AGE")
+mp.ylabel("FARE")
+mp.legend()
+
+mp.show()
 
 
 
