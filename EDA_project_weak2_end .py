@@ -21,6 +21,11 @@ print(df.tail())
 #Remove the Duplicates
 df=df.drop_duplicates()
 
+#Filter passenger : First class
+First_class=df[df["Pclass"]==1]
+print(First_class.head())
+print(First_class.tail())
+
 
 
 
