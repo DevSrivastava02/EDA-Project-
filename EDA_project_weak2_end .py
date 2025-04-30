@@ -18,5 +18,10 @@ df["Embarked"]=df["Embarked"].fillna(df["Embarked"].mode()[0])
 print(df.head())
 print(df.tail())
 
+#Remove the Duplicates
+df=df.drop_duplicates()
+
+
+
 
 
