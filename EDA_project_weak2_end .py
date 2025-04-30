@@ -26,6 +26,14 @@ First_class=df[df["Pclass"]==1]
 print(First_class.head())
 print(First_class.tail())
 
+#Visulization of servival rate according to the Pclass
+Servival_by_class=df.groupby("Pclass")["Survived"].mean()
+mp.bar(Servival_by_class.index,Servival_by_class.values, color="Skyblue" )
+mp.title="Servival_rate"
+mp.legend()
+mp.xlabel("Pclass")
+mp.ylabel("Servived")
+mp.show()
 
 
 
